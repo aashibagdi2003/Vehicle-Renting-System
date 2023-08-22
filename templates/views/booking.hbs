@@ -1,0 +1,349 @@
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!--Link to boxicon-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <title>Booking</title>
+    <style>
+      /* Google Fonts */ @import
+      url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,900&display=swap');
+      * { margin: 0; padding: 0; box-sizing: border-box; scroll-padding-top:
+      2rem; scroll-behavior: smooth; list-style: none; text-decoration: none;
+      font-family: 'Anton', sans-serif; font-family: 'Poppins', sans-serif; }
+      :root { --main-color: #fe5b3d; --second-color: #ffac38; --text-color:
+      #444; --gradient: linear-gradient(#fe5b3d, #ffac38); } /* Custom Scrool
+      Bar*/ html::-webkit-scrollbar { width: 0.5; }
+      html::-webkit-scrollbar-track { background: transparent; }
+      html::-webkit-scrollbar-thumb { background: var(--main-color);
+      border-radius: 5rem; } .container-fluid { padding-top: 0.5rem;
+      padding-left: 2.1rem; padding-bottom: 1rem; } .pick { color: #fe5b3d;
+      letter-spacing: 2px; font-weight: bold; } .hub { color: #474fa0;
+      letter-spacing: 2px; font-weight: bold; } .head_line { padding-top:
+      0.5rem; } .line { padding-top: 0.2rem; color: grey; } /*Button */ .btn {
+      background: #474fa0; color: #FFF; border-radius: 0.5rem; } .btn:hover {
+      background: var(--main-color); color: black; } /*Copyright*/ .copyright {
+      background: #eeeff1; padding: 20px; display: flex; justify-content:
+      space-between; align-items: center; } .socail a { color: #444; padding:
+      10px; font-size: 21px; }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div class="container-fluid" style="background:  #eeeff1;">
+      <div class="">
+        <a href="#" class="logo_img navbar-brand fs-1"><img
+            src="img/jeep.png"
+            alt="icon"
+            width="50"
+            height="50"
+          />
+          <span class="pick">Pick</span><span class="hub">Hub</span></a>
+      </div>
+      <div>
+        <h3 class="head_line">PickHub Host -India</h3>
+        <p class="line">Share few more details and move one step closer to
+          EARNING Up to RS.50000 per month</p>
+      </div>
+    </div>
+
+    <!--Form To Apply For vechile-->
+    <div class="container mt-5">
+
+      <form
+        action="/upload"
+        method="post"
+        class="row g-3 needs-validation justify-content-center"
+        enctype="multipart/form-data"
+      >
+
+        <div class="col-md-9">
+          <label for="validationCustom01" class="form-label">Vechile Number</label>
+          <input
+            type="text"
+            class="form-control"
+            name="vnum"
+            id="validationCustom01"
+            required
+          />
+          <div class="invalid-feedback">
+            Please enter Vechile Number
+          </div>
+        </div>
+
+        <div class="col-md-9">
+          <label for="validationCustom01" class="form-label">Vechile brand</label>
+          <input
+            type="text"
+            class="form-control"
+            name="vbrand"
+            id="validationCustom01"
+            required
+          />
+          <div class="invalid-feedback">
+            Please enter Vechile brand
+          </div>
+        </div>
+
+        <div class="col-md-9">
+          <label for="validationCustom01" class="form-label">Vechile Model</label>
+          <input
+            type="text"
+            class="form-control"
+            name="vmodel"
+            id="validationCustom02"
+            required
+          />
+          <div class="invalid-feedback">
+            Please enter Vechile Model
+          </div>
+        </div>
+
+        <div class="col-md-9">
+          <label for="validationCustom01" class="form-label">Vechile Variant</label>
+          <input
+            type="text"
+            class="form-control"
+            name="variant"
+            id="validationCustom03"
+            required
+          />
+          <div class="invalid-feedback">
+            <div class="invalid-feedback">
+              Please enter Vechile Variant
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-9">
+          <label for="validationCustom04" class="form-label">City</label>
+          <select
+            class="form-select"
+            name="city"
+            id="validationCustom04"
+            required
+          >
+            <option value="Indore">Indore</option>
+            <option value="Dewas">Dewas</option>
+            <option value="Ujjain">Ujjian </option>
+            <option value="Bhopal">Bhopal</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid city
+          </div>
+        </div>
+
+        <label
+          for="validationCustom067"
+          class="form-label fuel_type"
+          style="padding-left: 11rem;"
+        >Fuel Type</label>
+        <div class="col-md-8">
+          <div class="form-check form-check-inline col-md-3">
+
+            <input
+              class=""
+              type="radio"
+              name="fuel"
+              id="inlineRadio1"
+              value="Diesel"
+            />
+            <label class="" for="inlineRadio1">Diesel</label>
+          </div>
+          <div class="form-check form-check-inline col-md-2">
+            <input
+              class=""
+              type="radio"
+              name="fuel"
+              id="inlineRadio2"
+              value="Petrol"
+            />
+            <label class="" for="inlineRadio2">Petrol</label>
+          </div>
+          <div class="form-check form-check-inline col-md-3">
+            <input
+              class=""
+              type="radio"
+              name="fuel"
+              id="inlineRadio3"
+              value="Ev"
+            />
+            <label class="form-check-label" for="inlineRadio3">EV</label>
+          </div>
+        </div>
+
+        <div class="col-md-9">
+          <label for="validationCustom01" class="form-label">Year of
+            registration
+          </label>
+          <input
+            type="text"
+            class="form-control"
+            name="year"
+            id="validationCustom07"
+            required
+          />
+
+          <div class="invalid-feedback">
+            Please enter the year of registration
+          </div>
+
+        </div>
+
+        <div class="col-md-9">
+          <label for="validationCustom01" class="form-label">Car Driven(in km)</label>
+          <input
+            type="text"
+            class="form-control"
+            name="dist"
+            id="validationCustom08"
+            required
+          />
+
+          <div class="invalid-feedback">
+            Please enter the Car Driven(in approx)
+          </div>
+
+        </div>
+
+        <div class="col-md-9">
+          <label for="validationCustom01" class="form-label">Pincode</label>
+          <input
+            type="text"
+            class="form-control"
+            name="pin"
+            id="validationCustom03"
+            required
+          />
+
+          <div class="invalid-feedback">
+            Please enter valid pincode
+          </div>
+
+        </div>
+
+        <div class="col-md-9">
+          <label for="formFileMultiple" class="form-label">Select image of
+            vechiles</label>
+          <input
+            class="form-control"
+            type="file"
+            name="file"
+            id="formFileMultiple"
+          />
+
+          <div class="invalid-feedback">
+            Please select image of vechile
+          </div>
+        </div>
+
+        <div class="col-md-9">
+          <label for="validationCustom01" class="form-label">Enter Rent</label>
+          <input
+            type="text"
+            class="form-control"
+            name="rent"
+            id="validationCustom03"
+            required
+          />
+
+          <div class="invalid-feedback">
+            Please enter valid Rent
+          </div>
+
+        </div>
+
+        <div class="col-md-9">
+          <label for="validationCustom01" class="form-label">Vechile description</label>
+          <textarea
+            class="form-control"
+            name="vdes"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            requiredssss
+          ></textarea>
+
+          <div class="invalid-feedback">
+            Please enter the vechile description
+          </div>
+
+        </div>
+
+        <div class="form-check col-md-9">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            name="agree"
+            value="checked"
+            id="invalidCheck2"
+            required
+          />
+          <label class="form-check-label" for="invalidCheck2">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">
+            Please check the check box
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="btn col-md-6 btn-light mt-4 mb-5"
+        >Apply</button>
+
+      </form>
+    </div>
+
+    <!--Footer-->
+    <footer>
+      <div class="copyright">
+        <p>&#169; PickHub All Right Reserved</p>
+        <div class="social">
+          <a href="#"><i class="bx bxl-facebook"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+
+      // Validation Code (function () { 'use strict' // Fetch all the forms we
+      want to apply custom Bootstrap validation styles to var forms =
+      document.querySelectorAll('.needs-validation') // Loop over them and
+      prevent submission Array.prototype.slice.call(forms) .forEach(function
+      (form) { form.addEventListener('submit', function (event) { if
+      (!form.checkValidity()) { event.preventDefault() event.stopPropagation() }
+      form.classList.add('was-validated') }, false) }) })()
+    </script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+
+</html>
